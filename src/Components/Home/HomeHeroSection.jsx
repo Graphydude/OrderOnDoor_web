@@ -1,5 +1,3 @@
-import { FaBars } from "react-icons/fa6";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,6 +10,13 @@ import FourthImage from "../../Images/HomeHeroSwiperImages/FourthImage.webp";
 import FifthImage from "../../Images/HomeHeroSwiperImages/FifthImage.webp";
 import SixthImage from "../../Images/HomeHeroSwiperImages/SixthImage.webp";
 import SeventhImage from "../../Images/HomeHeroSwiperImages/SeventhImage.webp";
+import EnglishBookImg from "../../Images/HomeFeaturedImages/1.webp";
+import RightFirstImg from "../../Images/HomeFeaturedImages/1_right.webp";
+import RightSecondImg from "../../Images/HomeFeaturedImages/2_right.webp";
+import RightThirdImg from "../../Images/HomeFeaturedImages/3_right.webp";
+import RightFourthImg from "../../Images/HomeFeaturedImages/4_right.webp";
+import BottomFirstImg from "../../Images/HomeFeaturedImages/1_bottom.webp";
+import BottomSecondImg from "../../Images/HomeFeaturedImages/2_bottom.webp";
 
 import {
   Navigation,
@@ -24,61 +29,7 @@ import {
 const Home = () => {
   return (
     <div className="Home-page">
-      <div className="menu-opener">
-        <ul className="browse-categories">
-          <li>
-            <FaBars className="menu-icon" />
-            <h3>BROWSE CATEGORIES</h3>
-            <MdKeyboardArrowDown className="arrow-icon" />
-            <div className="browse-categories-list-div">
-              <ul className="browse-categories-list">
-                <li>
-                  <a href="#">featured Local Authors</a>
-                </li>
-                <li>
-                  <a href="#">Islamic Book Deals</a>
-                </li>
-                <li>
-                  <a href="#">Accessories</a>
-                </li>
-                <li>
-                  <a href="#">English Books/Novels</a>
-                </li>
-                <li>
-                  <a href="#">Urdu Books/Novels</a>
-                </li>
-                <li>
-                  <a href="#">Books Series</a>
-                </li>
-                <li>
-                  <a href="#">Children's Books</a>
-                </li>
-                <li>
-                  <a href="#">Islamic Books</a>
-                </li>
-                <li>
-                  <a href="#">IELTS Books</a>
-                </li>
-                <li>
-                  <a href="#">CSS/PMS Books</a>
-                </li>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div className="book-categories">
-          <a href="#">ENGLISH BOOKS</a>
-          <a href="#">URDU BOOKS</a>
-          <a href="#">ISLAMIC BOOKS</a>
-          <a href="#">IELTS BOOKS</a>
-          <a href="#">CSS/PMS BOOKS</a>
-          <a href="#">MARKERS & HIGHLIGHTERS</a>
-          <a href="#">CONTACT US</a>
-        </div>
-      </div>
+      {/* swiper section */}
       <div className="swiper-div">
         <Swiper
           cssMode={true}
@@ -115,6 +66,67 @@ const Home = () => {
             <img src={SeventhImage} alt="Image" />
           </SwiperSlide>
         </Swiper>
+      </div>
+      {/* featured section */}
+      <div className="featured-category-div">
+        <div className="title-featured-section">
+          <h1>FEATURED CATEGORIES</h1>
+        </div>
+        <div className="above-featured-div">
+          <div className="left-div featured-card">
+            <img className="featured-img" src={EnglishBookImg} alt="Image" />
+            <div className="name-and-num-pro-left-div same-style-nam-num-pro">
+              <h1>ENGLISH NOVELS/BOOKS</h1>
+              <span className="num-pro">750 products</span>
+            </div>
+          </div>
+          <div className="right-div">
+            <div className="right-first-div featured-card">
+              <img className="featured-img" src={RightFirstImg} alt="Image" />
+              <div className="same-style-nam-num-pro">
+                <h1>URDU BOOKS</h1>
+                <span className="num-pro">117 products</span>
+              </div>
+            </div>
+            <div className="right-second-div featured-card">
+              <img className="featured-img" src={RightSecondImg} alt="" />
+              <div className="same-style-nam-num-pro">
+                <h1>CHILDREN BOOKS</h1>
+                <span className="num-pro">90 products</span>
+              </div>
+            </div>
+            <div className="right-third-div featured-card">
+              <img className="featured-img" src={RightThirdImg} alt="" />
+              <div className="same-style-nam-num-pro">
+                <h1>IELTS BOOKS</h1>
+                <span className="num-pro">9 products</span>
+              </div>
+            </div>
+            <div className="right-fourth-div featured-card">
+              <img className="featured-img" src={RightFourthImg} alt="" />
+              <div className="same-style-nam-num-pro">
+                <h1>ISLAMIC BOOKS</h1>
+                <span className="num-pro">47 products</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bottom-div">
+          <div className="bottom-first-div featured-card">
+            <img className="featured-img" src={BottomFirstImg} alt="" />
+            <div className="same-style-nam-num-pro">
+              <h1>BOOKS SERIES</h1>
+              <span className="num-pro">54 products</span>
+            </div>
+          </div>
+          <div className="bottom-second-div featured-card">
+            <img className="featured-img" src={BottomSecondImg} alt="" />
+            <div className="same-style-nam-num-pro">
+              <h1>ACCESSORIES</h1>
+              <span className="num-pro">24 products</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

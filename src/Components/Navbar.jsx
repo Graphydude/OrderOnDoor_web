@@ -9,7 +9,10 @@ import {
   FaShoppingCart,
   FaBars,
 } from "react-icons/fa";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowDown,
+  MdKeyboardArrowDown,
+} from "react-icons/md";
 import logo from "../Images/NavbarImages/logo.webp";
 import secondLogo from "../Images/NavbarImages/LaptopSizeLogo.webp";
 import { useState } from "react";
@@ -22,8 +25,8 @@ const Navbar = () => {
   };
 
   const listStyle = {
-    display: !isListOpen ? "none" : "flex"
-  }
+    display: !isListOpen ? "none" : "flex",
+  };
 
   return (
     <div className="navbar-back-div">
@@ -105,6 +108,61 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
+          <div className="menu-opener">
+            <ul className="browse-categories">
+              <li>
+                <FaBars className="menu-icon" />
+                <h3>BROWSE CATEGORIES</h3>
+                <MdKeyboardArrowDown className="arrow-icon" />
+                <div className="browse-categories-list-div">
+                  <ul className="browse-categories-list">
+                    <li>
+                      <a href="#">featured Local Authors</a>
+                    </li>
+                    <li>
+                      <a href="#">Islamic Book Deals</a>
+                    </li>
+                    <li>
+                      <a href="#">Accessories</a>
+                    </li>
+                    <li>
+                      <a href="#">English Books/Novels</a>
+                    </li>
+                    <li>
+                      <a href="#">Urdu Books/Novels</a>
+                    </li>
+                    <li>
+                      <a href="#">Books Series</a>
+                    </li>
+                    <li>
+                      <a href="#">Children's Books</a>
+                    </li>
+                    <li>
+                      <a href="#">Islamic Books</a>
+                    </li>
+                    <li>
+                      <a href="#">IELTS Books</a>
+                    </li>
+                    <li>
+                      <a href="#">CSS/PMS Books</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div className="book-categories">
+              <a href="#">ENGLISH BOOKS</a>
+              <a href="#">URDU BOOKS</a>
+              <a href="#">ISLAMIC BOOKS</a>
+              <a href="#">IELTS BOOKS</a>
+              <a href="#">CSS/PMS BOOKS</a>
+              <a href="#">MARKERS & HIGHLIGHTERS</a>
+              <a href="#">CONTACT US</a>
+            </div>
+          </div>
       </header>
     </div>
   );
