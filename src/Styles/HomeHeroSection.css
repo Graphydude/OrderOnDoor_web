@@ -1,6 +1,5 @@
 .Home-page {
   width: 100%;
-  height: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +10,7 @@
   min-width: 1024px !important;
   height: 750px;
   position: relative;
+  display: none;
   z-index: 1;
   margin-top: 10px;
 }
@@ -61,13 +61,29 @@
 
 /* FEATURED SECTION STYLING */
 
+.featured-div {
+  width: 1200px;
+  min-width: 1024px;
+  height: 600px;
+  background-color: #333333;
+}
+
+.featured-first-back-div {
+  width: 100%;
+}
+
+.featured-second-back-div {
+  width: 100%;
+}
+
 .featured-category-div {
-  max-width: 1200px;
-  min-width: 768px;
-  display: none;
+  width: 1200px;
+  min-width: 1024px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: aqua;
+  z-index: 12;
 }
 
 .title-featured-section {
@@ -83,89 +99,61 @@
   font-weight: 600;
 }
 
-.above-featured-div {
-  width: 100%;
+.featured-cards-back-div {
+  width: 1200px;
+  min-width: 1024px;
+  height: 1000px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;  
 }
 
-.right-div {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.featured-card {
-  width: 280px;
-  min-width: 200px;
-  height: 280px;
+.featured-left-div {
+  width: 600px;
+  min-width: 300px;
+  height: 600px;
+  min-height: 300px;
   position: relative;
+  background-color: yellowgreen;
   overflow: hidden;
-  margin: 10px;
+
 }
 
-.left-div {
-  width: 580px !important;
-  min-width: 400px;
-  height: 580px !important;
-}
-
-.featured-card > img {
+.featured-left-div > img {
   width: 100%;
-  position: absolute;
+  height: 100%;
   transition: 0.3s ease-in-out;
 }
 
-.same-style-nam-num-pro {
-  position: absolute;
+.featured-details {
   width: 100%;
-  bottom: -45px;
-  left: 20px;
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
   transition: 0.3s ease-in-out;
 }
 
-.name-and-num-pro-left-div {
-  bottom: -25px;
-}
-
-.name-and-num-pro-left-div > span {
-  bottom: 10px;
-  font-size: 16px;
-}
-
-.same-style-nam-num-pro > h1 {
-  position: absolute;
-  font-size: 25px;
-  bottom: 55px;
-  color: rgb(65, 65, 65);
+.featured-details > h1 {
+  margin-bottom: 5px;
   font-weight: 600;
+  color: #333333;
 }
 
-.num-pro {
-  position: absolute;
-  bottom: 30px;
-  font-size: 14px;
-  color: rgb(147, 149, 150);
+.featured-details > span {
+  color: #8E8E8E;
 }
 
-.featured-card:hover .same-style-nam-num-pro {
-  transform: translateY(-30px);
+.featured-left-div:hover > .featured-details {
+  bottom: 15px;
 }
 
-.featured-card:hover .featured-img {
+.featured-left-div:hover > img {
   transform: scale(1.1);
 }
 
-.bottom-div {
-  width: 100%;
-  display: flex;
-  
-}
+
 
 
 @media (max-width: 1024px) {
-
-
   .swiper-div {
     max-width: 1000px;
     min-width: 320px;

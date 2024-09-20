@@ -72,58 +72,12 @@ const Home = () => {
         <div className="title-featured-section">
           <h1>FEATURED CATEGORIES</h1>
         </div>
-        <div className="above-featured-div">
-          <div className="left-div featured-card">
-            <img className="featured-img" src={EnglishBookImg} alt="Image" />
-            <div className="name-and-num-pro-left-div same-style-nam-num-pro">
+        <div className="featured-cards-back-div">
+          <div className="featured-left-div">
+            <img src={EnglishBookImg} alt="image" />
+            <div className="featured-details">
               <h1>ENGLISH NOVELS/BOOKS</h1>
-              <span className="num-pro">750 products</span>
-            </div>
-          </div>
-          <div className="right-div">
-            <div className="right-first-div featured-card">
-              <img className="featured-img" src={RightFirstImg} alt="Image" />
-              <div className="same-style-nam-num-pro">
-                <h1>URDU BOOKS</h1>
-                <span className="num-pro">117 products</span>
-              </div>
-            </div>
-            <div className="right-second-div featured-card">
-              <img className="featured-img" src={RightSecondImg} alt="" />
-              <div className="same-style-nam-num-pro">
-                <h1>CHILDREN BOOKS</h1>
-                <span className="num-pro">90 products</span>
-              </div>
-            </div>
-            <div className="right-third-div featured-card">
-              <img className="featured-img" src={RightThirdImg} alt="" />
-              <div className="same-style-nam-num-pro">
-                <h1>IELTS BOOKS</h1>
-                <span className="num-pro">9 products</span>
-              </div>
-            </div>
-            <div className="right-fourth-div featured-card">
-              <img className="featured-img" src={RightFourthImg} alt="" />
-              <div className="same-style-nam-num-pro">
-                <h1>ISLAMIC BOOKS</h1>
-                <span className="num-pro">47 products</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bottom-div">
-          <div className="bottom-first-div featured-card">
-            <img className="featured-img" src={BottomFirstImg} alt="" />
-            <div className="same-style-nam-num-pro">
-              <h1>BOOKS SERIES</h1>
-              <span className="num-pro">54 products</span>
-            </div>
-          </div>
-          <div className="bottom-second-div featured-card">
-            <img className="featured-img" src={BottomSecondImg} alt="" />
-            <div className="same-style-nam-num-pro">
-              <h1>ACCESSORIES</h1>
-              <span className="num-pro">24 products</span>
+              <span>750 products</span>
             </div>
           </div>
         </div>
