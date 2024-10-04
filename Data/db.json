@@ -1,5 +1,16 @@
 {
   "cards": [
-    
+    {
+      "id": 1,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/08/1.png",
+      "title": "Cute Panda Dairy for Girls & Kids",
+      "price": "Rs1,000,00",
+      "offPrice": "Rs499,00",
+      "off": "-50%"
+    },
+    {
+      "id": 2,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/08/4-3.png"
+    }
   ]
 }
