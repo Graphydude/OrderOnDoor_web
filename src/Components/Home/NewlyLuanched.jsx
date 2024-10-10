@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import Card from "../Home/Card";
 import DataOfCard from "./DataOfCard";
 
 const NewLaunched = () => {
@@ -38,10 +37,10 @@ const NewLaunched = () => {
             modules={[Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
+            <SwiperSlide className="newly-launched-card">
               <DataOfCard />
             </SwiperSlide>
-            <SwiperSlide><DataOfCard /></SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
             <SwiperSlide>Slide 3</SwiperSlide>
             <SwiperSlide>Slide 4</SwiperSlide>
             <SwiperSlide>Slide 5</SwiperSlide>

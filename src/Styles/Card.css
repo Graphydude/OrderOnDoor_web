@@ -5,14 +5,112 @@
 .card-image-div {
     width: 100%;
     height: 50%;
-    background-color: yellowgreen;
+    position: relative;
+    overflow: hidden;
 }
- 
-.card-image-div > img {
-    width: 100%;
-    height: 100%;
+
+.card-image-div > span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 20px 10px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
 }
 
 .featured-card-image {
     width: 100%;
+    height: 100%;
+}
+
+.add-to-card-btn {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    right: 0;
+    left: 0;
+    bottom: -45px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.add-to-card-btn > h1 {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    opacity: 80%;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+
+.card-image-div:hover > .add-to-card-btn {
+    bottom: 0px;
+}
+
+.add-to-card-icon {
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    height: 40px;
+    padding: 7px;
+    transition: 0.3s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.add-to-card-btn:hover > .add-to-card-icon {
+    bottom: 0;
+}
+
+.card-icons {
+    position: absolute;
+    top: 20px;
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.card-image-div:hover > .card-icons {
+    right: 10px;
+    opacity: 100%;
+}
+
+.card-icon {
+    font-size: 30px;
+    color: #000000;
+    
+}
+
+.card-details {
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+}
+
+.featured-card-title {
+    font-size: 16px;
+}
+
+.original-price {
+    font-size: 15px;
+    text-decoration: line-through;
+    color: rgb(169, 168, 168);
+}
+
+.off-price {
+    font-size: 15px;
+    margin-left: 5px;
+    font-weight: 700;
 }
