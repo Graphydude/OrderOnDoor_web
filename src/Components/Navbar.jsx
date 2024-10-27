@@ -13,12 +13,15 @@ import {
   MdOutlineKeyboardArrowDown,
   MdKeyboardArrowDown,
 } from "react-icons/md";
+import "../Styles/LoginFormSide.css";
+import { FaXmark } from "react-icons/fa6";
 import logo from "../Images/NavbarImages/logo.webp";
 import secondLogo from "../Images/NavbarImages/LaptopSizeLogo.webp";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isListOpen, setIsListOpen] = useState(false);
+  const [IsLoginFormOpen ,setIsLoginFormOpen] = useState(false);
 
   const listToggle = () => {
     setIsListOpen(!isListOpen);
@@ -27,6 +30,25 @@ const Navbar = () => {
   const listStyle = {
     display: !isListOpen ? "none" : "flex",
   };
+
+  const loginToggle = () => {
+    setIsLoginFormOpen(!IsLoginFormOpen);
+  }
+
+  const loginStyle = {
+    display: !IsLoginFormOpen ? "none" : "flex",
+  }
+
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("sticky", window.scrollY > 250);
+  });
+
+  window.addEventListener("click", function() {
+    const loginAnimation = this.document.querySelector(".login-form-side-empty-div");
+    loginAnimation.classList.add("loginAnimation")
+  })
+
 
   return (
     <div className="navbar-back-div">
@@ -75,7 +97,7 @@ const Navbar = () => {
               </form>
             </div>
             <div className="login-back-div">
-              <a href="#">LOGIN/REGISTER</a>
+              <a href="#" onClick={loginToggle}>LOGIN/REGISTER</a>
               <FaHeart className="heart-icon" />
               <div className="shopping-card-div">
                 <FaShoppingCart className="shopping-icon" />
@@ -102,68 +124,98 @@ const Navbar = () => {
                 <input
                   type="text"
                   placeholder="Search for products"
-                  className="nav-input"
+                  className="second-nav-input"
                 />
               </form>
             </div>
           </div>
         </nav>
-          <div className="menu-opener">
-            <ul className="browse-categories">
-              <li>
-                <FaBars className="menu-icon" />
-                <h3>BROWSE CATEGORIES</h3>
-                <MdKeyboardArrowDown className="arrow-icon" />
-                <div className="browse-categories-list-div">
-                  <ul className="browse-categories-list">
-                    <li>
-                      <a href="#">featured Local Authors</a>
-                    </li>
-                    <li>
-                      <a href="#">Islamic Book Deals</a>
-                    </li>
-                    <li>
-                      <a href="#">Accessories</a>
-                    </li>
-                    <li>
-                      <a href="#">English Books/Novels</a>
-                    </li>
-                    <li>
-                      <a href="#">Urdu Books/Novels</a>
-                    </li>
-                    <li>
-                      <a href="#">Books Series</a>
-                    </li>
-                    <li>
-                      <a href="#">Children's Books</a>
-                    </li>
-                    <li>
-                      <a href="#">Islamic Books</a>
-                    </li>
-                    <li>
-                      <a href="#">IELTS Books</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS/PMS Books</a>
-                    </li>
-                    <li>
-                      <a href="#">Contact Us</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <div className="book-categories">
-              <a href="#">ENGLISH BOOKS</a>
-              <a href="#">URDU BOOKS</a>
-              <a href="#">ISLAMIC BOOKS</a>
-              <a href="#">IELTS BOOKS</a>
-              <a href="#">CSS/PMS BOOKS</a>
-              <a href="#">MARKERS & HIGHLIGHTERS</a>
-              <a href="#">CONTACT US</a>
-            </div>
+        <div className="menu-opener">
+          <ul className="browse-categories">
+            <li>
+              <FaBars className="menu-icon" />
+              <h3>BROWSE CATEGORIES</h3>
+              <MdKeyboardArrowDown className="arrow-icon" />
+              <div className="browse-categories-list-div">
+                <ul className="browse-categories-list">
+                  <li>
+                    <a href="#">featured Local Authors</a>
+                  </li>
+                  <li>
+                    <a href="#">Islamic Book Deals</a>
+                  </li>
+                  <li>
+                    <a href="#">Accessories</a>
+                  </li>
+                  <li>
+                    <a href="#">English Books/Novels</a>
+                  </li>
+                  <li>
+                    <a href="#">Urdu Books/Novels</a>
+                  </li>
+                  <li>
+                    <a href="#">Books Series</a>
+                  </li>
+                  <li>
+                    <a href="#">Children's Books</a>
+                  </li>
+                  <li>
+                    <a href="#">Islamic Books</a>
+                  </li>
+                  <li>
+                    <a href="#">IELTS Books</a>
+                  </li>
+                  <li>
+                    <a href="#">CSS/PMS Books</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div className="book-categories">
+            <a href="#">ENGLISH BOOKS</a>
+            <a href="#">URDU BOOKS</a>
+            <a href="#">ISLAMIC BOOKS</a>
+            <a href="#">IELTS BOOKS</a>
+            <a href="#">CSS/PMS BOOKS</a>
+            <a href="#">MARKERS & HIGHLIGHTERS</a>
+            <a href="#">CONTACT US</a>
           </div>
+        </div>
       </header>
+        {/* Login form side */}
+        <div style={loginStyle} className="login-form-side-back-div">
+          <div className="login-form-side-empty-div" onClick={loginToggle}></div>
+          <div className="login-form-side">
+            <div className="login-title-div">
+              <h1>SIGN IN</h1>
+              <span className="login-form-close" onClick={loginToggle}>
+                <FaXmark className="login-form-x-icon" /> CLOSE
+              </span>
+            </div>
+            <form>
+              <div className="user-name-or-email-div form-label-and-input">
+                <label>User name or email</label>
+                <input className="form-input" type="text" />
+              </div>
+              <div className="password-div form-label-and-input">
+                <label>Password</label>
+                <input className="form-input" type="text" />
+              </div>
+              <button className="form-login" type="submit">LOG IN</button>
+              <div className="login-form-footer">
+                <label>
+                  <input type="checkbox" />
+                  <span>Remember me</span>
+                </label>
+                <a href="#">Lost your password?</a>
+              </div>
+            </form>
+          </div>
+        </div>
     </div>
   );
 };

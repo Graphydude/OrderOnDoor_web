@@ -1,0 +1,134 @@
+.login-form-side-back-div {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 112;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+
+.login-form-side-empty-div {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 80%;
+}
+
+.login-form-side {
+  width: 350px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+}
+
+.login-title-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 20px 0 50px 0;
+}
+
+.login-title-div > h1 {
+  font-size: 22px;
+}
+
+.login-form-close {
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  transition: 0.3s all ease-in-out;
+}
+
+.login-form-x-icon {
+  font-size: 20px;
+  color: black;
+  transition: 0.3s all ease-in-out;
+}
+
+.login-title-div:hover {
+  cursor: pointer;
+}
+
+.login-form-close:hover > .login-form-x-icon {
+  color: rgb(158, 158, 158);
+}
+
+.login-form-close:hover {
+  color: rgb(158, 158, 158);
+}
+
+form {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-label-and-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.form-label-and-input > label {
+  font-size: 16px;
+}
+
+.form-input {
+  height: 40px;
+  border: 1px solid rgb(155, 154, 154);
+  border-radius: 50px;
+}
+
+.form-login {
+  margin: 0 20px;
+  font-weight: 600;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 50px;
+  color: white;
+  background-color: black;
+  border: none;
+  transition: 0.3s all ease-in-out;
+}
+
+.form-login:hover {
+  cursor: pointer;
+  background-color: #ead920;
+}
+
+.login-form-footer {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form-footer > label > input {
+  margin-right: 5px;
+}
+
+.login-form-footer > label > span {
+  font-size: 16px;
+}
+
+.login-form-footer > a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.login-form-footer > a:hover {
+  text-decoration: underline;
+}
+
+
+.loginAnimation {
+  
+}
