@@ -1,3 +1,4 @@
+import '../../Styles/Home/HomeHeroSection.css';
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -29,7 +30,6 @@ import {
 const Home = () => {
   return (
     <div className="Home-page">
-      {/* swiper section */}
       <div className="swiper-div">
         <Swiper
           cssMode={true}

@@ -21,7 +21,7 @@ header {
 }
 
 .announcement-bar {
-  width: 1200px;
+  width: 1300px;
   min-width: 1024px;
   height: 100%;
   display: flex;
@@ -32,16 +32,16 @@ header {
 
 
 .announcement {
-  width: 460px;
+  width: 500px;
 }
 
 .announcing > h1 {
-  font-size: 18px;
+  font-size: 20px;
   color: white;
 }
 
 .announcement-bar-icons {
-  width: 150px;
+  width: 180px;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -76,7 +76,7 @@ nav {
   top: 0;
   background-color: white;
   height: 70px;
-  width: 1200px;
+  width: 1300px;
 }
 
 .sticky > .navbar > .logo {
@@ -94,7 +94,7 @@ nav {
 /*  */
 
 .navbar {
-  width: 1200px;
+  width: 1300px;
   min-width: 1024px;
   display: flex;
   justify-content: space-between;
@@ -111,7 +111,7 @@ nav {
 }
 
 .search-div {
-  width: 750px;
+  width: 850px;
   min-width: 600px;
   height: 100%;
   margin: 0 10px;
@@ -119,7 +119,7 @@ nav {
 
 .nav-search {
   width: 100%;
-  height: 45px;
+  height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -143,7 +143,7 @@ nav {
   align-items: center;
   border-right: 1px solid rgb(209, 203, 203);
   border-left: 1px solid rgb(209, 203, 203);
-  margin: 0 10px;
+  margin: 0 5px;
   padding: 0 10px;
   position: relative;
 }
@@ -178,11 +178,11 @@ nav {
 
 .search-icon {
   font-size: 24px;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .login-back-div {
-  width: 230px;
+  width: 250px;
   min-width: 200px;
   height: 100%;
   display: flex;
@@ -191,7 +191,7 @@ nav {
 }
 
 .login-back-div > a {
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   font-weight: 700;
   color: #212121;
@@ -262,9 +262,9 @@ nav {
 }
 
 .menu-opener {
-  width: 1200px;
+  width: 1300px;
+  min-width: 1024px !important;
   display: flex;
-  justify-content: space-between;
   margin: 0 10px;
 }
 
@@ -273,7 +273,7 @@ nav {
   min-width: 200px;
   height: 50px;
   background-color: black;
-  margin-right: 20px;
+  margin-right: 50px;
   cursor: pointer;
 }
 
@@ -346,7 +346,7 @@ nav {
 }
 
 .book-categories {
-  width: 870px;
+  width: 900px;
   min-width: 700px;
   display: flex;
   align-items: center;
@@ -355,12 +355,18 @@ nav {
 }
 
 .book-categories > a {
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   font-weight: 700;
   color: black;
   pointer-events: painted;
   padding-left: 9px;
+}
+
+@media (max-width: 1300px) {
+  .menu-opener {
+    width: 98%;
+  }
 }
 
 @media (max-width: 1200px) {

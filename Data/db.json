@@ -7,6 +7,64 @@
       "price": "Rs1,000,00",
       "offPrice": "Rs499,00",
       "off": "-50%"
+    },
+    {
+      "id": 2,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/08/4-3.png",
+      "title": "Magnetic Bookmarks (Pack of 6)",
+      "price": "Rs500,00",
+      "offPrice": "Rs249,00",
+      "off": "-50%"
+    },
+    {
+      "id": 3,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/08/12.png",
+      "title": "Cute Cartoon Keychain",
+      "price": "Rs500,00",
+      "offPrice": "Rs199,00",
+      "off": "-60%"
+    },
+    {
+      "id": 4,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/02/1-1.png",
+      "title": "Tote Bag (Eat, Read, Sleep)",
+      "price": "Rs1,600,00",
+      "offPrice": "Rs799,00",
+      "off": "-50%"
+    },
+    {
+      "id": 5,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/08/13-3.png",
+      "title": "Erasable Gel Pen",
+      "price": "Rs300,00",
+      "offPrice": "Rs149,00",
+      "off": "-50%"
+    },
+    {
+      "id": 6,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/05/how-the-brain-lost-its-mind-11.png",
+      "title": "Book Page Holder - Handmade in wood",
+      "price": "Rs800,00",
+      "offPrice": "Rs299,00",
+      "off": "-63%"
+    },
+    {
+      "id": 7,
+      "image": "https://orderondoor.com/wp-content/uploads/2024/04/8.png",
+      "title": "Bear Sticky Notes",
+      "price": "Rs249,00",
+      "offPrice": "Rs199,00",
+      "off": "-64%"
+    },
+    {
+      "id": 8,
+      "image": "https://orderondoor.com/wp-content/uploads/2022/09/3-1.png",
+      "title": "Highlighter for Book Readers(Orange)",
+      "price": "Rs99,00",
+      "offPrice": "Rs65,00",
+      "off": "-34%"
     }
+    
   ]
+  
 }

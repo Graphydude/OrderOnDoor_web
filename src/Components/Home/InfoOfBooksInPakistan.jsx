@@ -1,3 +1,5 @@
+import '../../Styles/Home/InfoOfBooksInPakistan.css'
+
 const InfoOfBooksInPakistan = () => {
   return (
     <div className="info-of-books-back-div">

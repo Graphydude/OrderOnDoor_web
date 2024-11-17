@@ -1,11 +1,13 @@
-import React, { useRef, useState } from "react";
+import "../../Styles/Home/NewlyLaunched.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import DataOfCard from "./DataOfCard";
+import Card from "./Card";
+import { useProductContext } from "../../Contexts/ProductsContext";
 
 const NewLaunched = () => {
+  const data = useProductContext();
   return (
     <div className="newly-launched-back-div">
       <div className="newly-launched">
@@ -17,6 +19,7 @@ const NewLaunched = () => {
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
+            slidesPerGroup={4}
             pagination={{
               clickable: true,
             }}
@@ -34,20 +37,21 @@ const NewLaunched = () => {
                 spaceBetween: 50,
               },
             }}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: true,
+            }}
             modules={[Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide className="newly-launched-card">
-              <DataOfCard />
-            </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            {data.products &&
+              data.products.map((data) => {
+                return (
+                  <SwiperSlide className="newly-launched-card">
+                    <Card data={data} />
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
       </div>
